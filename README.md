@@ -19,7 +19,7 @@ composer du -o
 php src/lectureX/index.php
 ```
 
-## Gerar UML
+### Gerar UML
 Com o [Graphviz](https://www.graphviz.org/) é possível ler `.gv` e transformar em `.png`, facilitando a criação de diagramas. [Testa aí](https://dreampuf.github.io/GraphvizOnline).
 ```sh
 dot -Tpng -O arquivo.gv
