@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Leitura1\Parte2;
+namespace App\Lecture1\Part2;
 
 class MySqlConnection {
     public function connect()

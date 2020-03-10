@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Leitura1\Parte1;
+namespace App\Lecture1\Part2;
 
 require __DIR__ . '/../../bootstrap.php';
 

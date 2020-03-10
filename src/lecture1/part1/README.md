@@ -1,4 +1,4 @@
-# Leitura 1 (parte 1)
+# Lecture1\Part1
 ## Retorno esperado
 ```
 string(19) "Connecting to MySql"

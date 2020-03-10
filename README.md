@@ -16,7 +16,7 @@ composer du -o
 
 ### Execução do módulo
 ```sh
-php src/aulaX/index.php
+php src/lectureX/index.php
 ```
 
 ## Gerar UML

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Leitura1\Parte1;
+namespace App\Lecture1\Part1;
 
 class RoomService {
     private $connection; // private MysqlConnection $connection;

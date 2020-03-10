@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Leitura1\Parte2;
+namespace App\Lecture1\Part2;
 
-class ReservationReport {
+class RoomService {
     private $connection; // private OracleConnection $connection;
     function __construct() {
         $this->connection = new OracleConnection();
     }
 
-    public function reportGeneration()
+    public function roomVerification()
     {
         $this->connection->connect();
-        var_dump("business logic in order to generate a report");
+        var_dump("business logic over entity room");
     }
 }
 

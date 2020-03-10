@@ -1,4 +1,4 @@
-# Leitura 1 (parte 2)
+# Lecture1\Part2
 
 ## Problema inicial
 Trocar o banco MySQL para Oracle

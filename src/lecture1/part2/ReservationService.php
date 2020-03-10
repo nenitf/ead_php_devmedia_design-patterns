@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Leitura1\Parte2;
+namespace App\Lecture1\Part2;
 
 class ReservationService {
     private $connection; // private OracleConnection $connection;
