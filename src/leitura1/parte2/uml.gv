@@ -1,0 +1,29 @@
+/*
+ * http://fsteeg.com/notes/uml-class-diagrams-with-graphviz
+ * https://www.devmedia.com.br/modelagem-de-software-com-uml/20140
+ * https://www.graphviz.org/doc/info/attrs.html#k:arrowType
+ * https://www.ateomomento.com.br/uml-diagrama-de-classes/
+*/
+
+digraph hierarchy {
+    rankdir=BT; // direção de baixo para o topo
+    node[shape=record,style=filled,fillcolor=gray95];
+    edge[arrowhead=none,arrowtail=none,dir=both,minlen=2];
+    // https://www.graphviz.org/doc/info/arrows.html
+    // generalização (herança): [arrowhead=none]
+    // composição: [arrowtail=odiamond,headlabel="",taillabel="",label="connection"]
+    // agregação: [arrowtail=diamond,headlabel="",taillabel="",label="connection"]
+
+    MysqlConnection[label = <{MysqlConnection||+ connect: void}>];
+
+    {
+        rank = same;
+        RoomService[label = <{RoomService||+ roomVerification: void}>];
+        ReservationReport[label = <{ReservationReport||+ reportGeneration: void}>];
+        ReservationService[label = <{RoomService||+ createReservation: void}>];
+    }
+
+    RoomService->MysqlConnection[arrowtail=odiamond,label="connection"];
+    ReservationReport->MysqlConnection[arrowtail=odiamond,label="connection"];
+    ReservationService->MysqlConnection[arrowtail=odiamond,label="connection"];
+}

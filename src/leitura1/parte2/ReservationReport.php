@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Aula1\Parte1;
+namespace App\Leitura1\Parte2;
 
 class ReservationReport {
-    private $connection; // private MysqlConnection $connection;
+    private $connection; // private OracleConnection $connection;
     function __construct() {
-        $this->connection = new MysqlConnection();
+        $this->connection = new OracleConnection();
     }
 
     public function reportGeneration()
