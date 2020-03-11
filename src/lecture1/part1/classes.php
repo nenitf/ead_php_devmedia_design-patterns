@@ -1,6 +1,7 @@
 <?php
 
-//{{{Classes
+namespace App\Lecture1\Part1;
+
 class MySqlConnection {
     public function connect()
     {
@@ -47,15 +48,4 @@ class RoomService {
         var_dump("business logic over entity room");
     }
 }
-///}}}
 
-$room = new RoomService();
-$room->roomVerification();
-
-$report = new ReservationReport();
-$report->reportGeneration();
-
-$reservation = new reservationService();
-$reservation->createReservation();
-
-// vim: set fdm=marker:

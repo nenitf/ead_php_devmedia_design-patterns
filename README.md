@@ -9,11 +9,6 @@
 ## Adaptações do curso
 O curso é feito através do Java com Netbeans, portanto são necessárias algumas modificações
 
-### Atualizar loader composer
-```sh
-composer du -o
-```
-
 ### Execução do módulo
 ```sh
 php src/lectureX/index.php
