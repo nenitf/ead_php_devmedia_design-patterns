@@ -1,0 +1,42 @@
+/*
+ * http://fsteeg.com/notes/uml-class-diagrams-with-graphviz
+ * https://www.devmedia.com.br/modelagem-de-software-com-uml/20140
+ * https://www.graphviz.org/doc/info/attrs.html#k:arrowType
+ * https://www.ateomomento.com.br/uml-diagrama-de-classes/
+ * http://www.blackwasp.co.uk/gofpatterns.aspx
+ * https://www.dofactory.com/net/design-patterns
+*/
+
+digraph hierarchy {
+    rankdir=BT; // direção de baixo para o topo
+    node[shape=record,style=filled,fillcolor=gray95];
+    edge[arrowhead=none,arrowtail=none,dir=both,minlen=2];
+    // https://www.graphviz.org/doc/info/arrows.html
+    // generalização (herança): [arrowhead=onormal]
+    // implementação (interface): [arrowhead=onormal,style=dashed]
+    // composição: [arrowtail=odiamond,headlabel="",taillabel="",label="connection"]
+    // agregação: [arrowtail=diamond,headlabel="",taillabel="",label="connection"]
+
+    Connection[label = <{<i>interface</i><br/>Connection||+ connect: void}>];
+
+    {
+        rank = same;
+        MysqlConnection[label = <{MysqlConnection||+ connect: void}>];
+        OracleConnection[label = <{OracleConnection||+ connect: void}>];
+        SQLServerConnection[label = <{SQLServerConnection||+ connect: void}>];
+    }
+
+    {
+        rank = same;
+        RoomService[label = <{RoomService||+ roomVerification: void}>];
+        ReservationReport[label = <{ReservationReport||+ reportGeneration: void}>];
+        ReservationService[label = <{RoomService||+ createReservation: void}>];
+    }
+
+    MysqlConnection->Connection[arrowhead=onormal,style=dashed];
+    OracleConnection->Connection[arrowhead=onormal,style=dashed];
+    SQLServerConnection->Connection[arrowhead=onormal,style=dashed];
+    RoomService->Connection[arrowtail=odiamond,label="connection"];
+    ReservationReport->Connection[arrowtail=odiamond,label="connection"];
+    ReservationService->Connection[arrowtail=odiamond,label="connection"];
+}
