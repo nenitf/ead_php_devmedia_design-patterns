@@ -9,5 +9,5 @@ string(19) "Connecting to MySql"
 string(49) "business logic over the creation of a reservation"
 ```
 
-## Concusão
+## Conclusão
 - Apesar do código ter funcionado foi usado uma péssima prática de programação

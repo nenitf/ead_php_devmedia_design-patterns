@@ -20,7 +20,7 @@ string(19) "Connecting to Oracle"
 string(49) "business logic over the creation of a reservation"
 ```
 
-## Concusão
+## Conclusão
 O forte acoplamento ocorreu pois foi programado para uma classe concreta e nao uma interface
 ![uml](uml.gv.png)
 
