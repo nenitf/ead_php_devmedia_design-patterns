@@ -32,21 +32,8 @@ for ($i = 0; $i < count($arquivos); $i++){
 
 // https://stackoverflow.com/a/16462550
 function executaComNamespace($nomeArquivo, $namespace) {
-    $str = file_get_contents($nomeArquivo);
-
-    $php_start = 0;
-
-    $tag = '<?php';
-    $endtag = '?>';
-
-    $start_pos = $php_start + strlen($tag);
-    $end_pos = strpos($str, $endtag, $start_pos); 
-
-    $php_code = substr($str, $start_pos, $end_pos - $start_pos);
-    if (strtolower(substr($php_code, 0, 3)) == 'php')
-        $php_code = substr($php_code, 3);
-
-    $part1 = "namespace $namespace ;";
-
-    eval($part1 . $php_code);
+    $script = file_get_contents($nomeArquivo);
+    $script = str_replace('<?php', "namespace $namespace;", $script);
+    $script = str_replace('?>', "", $script);
+    eval($script);
 }
